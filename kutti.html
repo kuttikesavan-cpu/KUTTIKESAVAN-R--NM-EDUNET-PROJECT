@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placement Cell - Job Portal</title>
+    <link rel="stylesheet" href="kutti.css">
+</head>
+<body>
+
+    <header>
+        <h1>Campus Placement Portal</h1>
+        <p>Explore and bookmark your dream job opportunities</p>
+    </header>
+
+    <div class="filter-container">
+        <div class="filter-group">
+            <label for="search-input">Search Jobs</label>
+            <input type="text" id="search-input" placeholder="Title, keywords, or company...">
+        </div>
+        <div class="filter-group">
+            <label for="role-select">Domain / Role</label>
+            <select id="role-select">
+                <option value="all">All Roles</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Data Science">Data Science</option>
+                <option value="Design">Design</option>
+                <option value="Management">Management</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label for="location-select">Location</label>
+            <select id="location-select">
+                <option value="all">All Locations</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Remote">Remote</option>
+            </select>
+        </div>
+        <div class="filter-group">
+            <label class="toggle-container">
+                <input type="checkbox" id="bookmark-toggle">
+                <span>Saved Jobs Only</span>
+            </label>
+        </div>
+    </div>
+
+    <main class="jobs-wrapper">
+        <div class="job-stats" id="job-count">Showing 0 jobs</div>
+        <div class="jobs-grid" id="jobs-container"></div>
+    </main>
+
+    <div class="modal" id="job-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="close-modal-btn">&times;</span>
+            <h2 id="modal-title">Job Title</h2>
+            <div class="company" id="modal-company">Company Name</div>
+            
+            <div class="job-meta">
+                <span class="badge" id="modal-role">Role</span>
+                <span class="badge loc" id="modal-location">Location</span>
+                <span class="badge" id="modal-salary" style="background:#fef3c7; color:#d97706;">Salary</span>
+            </div>
+            
+            <h4>Job Description</h4>
+            <p id="modal-desc" style="color: var(--text-muted); line-height: 1.6; font-size: 0.95rem;"></p>
+            
+            <h4>Requirements</h4>
+            <ul id="modal-requirements"></ul>
+        </div>
+    </div>
+
+    <script src="kutti.js"></script>
+</body>
+</html>
